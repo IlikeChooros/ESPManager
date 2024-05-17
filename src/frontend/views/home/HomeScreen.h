@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../base/BaseScreen.h"
-#include "../../components/IconElement.h"
 
 namespace ui
 {

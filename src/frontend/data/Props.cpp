@@ -6,7 +6,7 @@ TextProps::TextProps(
     const String& text,
     const placement& loc,
     const uint16_t& bg,
-    char* font,
+    const char* font,
     uint16_t color
 ): Props(loc, bg), font(font), text(text), color(color) {}
 

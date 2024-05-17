@@ -2,11 +2,6 @@
 
 #include "../components/icons/icons.h"
 
-// extern char* NORMAL_FONT;
-// extern char* DETAIL_FONT;
-// extern char* TITLE_FONT;
-// extern char* CLOCK_FONT;
-
 enum class direction{
     row,
     column
@@ -26,26 +21,6 @@ enum class placement{
     end
 };
 
-enum class fonts{
-    detail,
-    title,
-    normal,
-    clock
-};
-
-// inline char* useFont(const fonts& font){
-//     switch(font){
-//         case fonts::detail:
-//             return DETAIL_FONT;
-//         case fonts::title:
-//             return TITLE_FONT;
-//         case fonts::clock:
-//             return CLOCK_FONT;
-//         default:
-//             return NORMAL_FONT;
-//     }
-// }
-
 class Props
 {
     public:
@@ -64,11 +39,11 @@ class TextProps: public Props
         const String& text = "",
         const placement& = placement::start,
         const uint16_t& bg = TFT_BLACK,
-        char* font = "",
+        const char* font = "",
         uint16_t color = TFT_LIGHTGREY
     );
 
-    char* font;
+    const char* font;
     String text;
     uint16_t color;
 };

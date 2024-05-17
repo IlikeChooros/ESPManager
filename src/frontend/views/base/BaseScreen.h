@@ -1,9 +1,10 @@
 #pragma once
 
 #include "../../../backend/providers/ErrorProvider.h"
-#include "../../components/ScreenElement.h"
+#include "../../components/include.h"
 #include "../../router/paths.h"
 #include "../../../backend/tasks/tasks.h"
+
 
 constexpr uint8_t MENU_SPACING = 15;
 constexpr uint16_t BASE_SCREEN_BG = 0x0042;
