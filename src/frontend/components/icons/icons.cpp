@@ -39,4 +39,16 @@ namespace ui
         tft.drawArc(x + 0.5f*size, y + 0.5f*size, 0.3f*size, 0.1f*size, 0, 360, gear_color, color, false);
         tft.fillSmoothCircle(x+0.5f*size, y+0.5f*size, 0.2f*size, color, gear_color);
     }
-}
+
+    void WiFiIcon::draw(
+        int16_t x, int16_t y,
+        int16_t size, uint16_t color,
+        uint16_t bg
+    )
+    {
+        drawCard(x, y, size, size, color, bg, &tft);
+        drawWiFi(x + 0.1f*size, y + 0.1f*size, 0.8f*size, 4, color, &tft);
+    }
+
+
+} // namespace ui

@@ -16,15 +16,7 @@ TouchButton(
     this->y = y;
     this->width = width;
     this->height = height;
-    this->color = DEFAULT_BTN_COLOR;
-    this->bg = 0xFFFF;
     (void)this->addOnClickEvent(do_nothing_button);
-}
-
-TouchButton& TouchButton::
-set_color(uint16_t color){
-    this->color = color;
-    return *this;
 }
 
 TouchButton& TouchButton::

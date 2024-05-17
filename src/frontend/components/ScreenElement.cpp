@@ -19,10 +19,15 @@ namespace ui
     }
 
     bool ScreenElement::
-    eventListener(Point *touch){
+    touched(Point *touch){
         bool touched = false;
         iterate([&touched, &touch](TouchButton* btn){touched = touched || btn->check(touch->x, touch->y);});
         return touched;
+    }
+
+    void ScreenElement::
+    addEventListener(EventCallback callb){
+        return;
     }
 
     void ScreenElement::iterate(

@@ -31,4 +31,17 @@ namespace ui
             uint16_t bg
         );
     };
+
+    class WiFiIcon : public Icon
+    {
+    public:
+        WiFiIcon() = default;
+
+        void
+        draw(
+            int16_t x, int16_t y,
+            int16_t size, uint16_t color,
+            uint16_t bg
+        );
+    };
 }

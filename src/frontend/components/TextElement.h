@@ -22,7 +22,7 @@ namespace ui
       _tft->drawString(props.text, props.x, props.y);
     }
 
-    bool eventListener(Point* touch) override {
+    bool touched(Point* touch) override {
       return false;
     }
 

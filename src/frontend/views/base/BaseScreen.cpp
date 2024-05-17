@@ -19,7 +19,7 @@ void  BaseScreen::loop(){
     Point point;
     while(!_exited){
         if (_ts->read(point)){
-            iterate([&](ScreenElement* elem) {elem->eventListener(&point);});
+            iterate([&point](ScreenElement* elem) {elem->touched(&point);});
         }
     }
 }

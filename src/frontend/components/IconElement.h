@@ -26,7 +26,7 @@ namespace ui
       }
     }
 
-    bool eventListener(Point* touch) override {
+    bool touched(Point* touch) override {
       return false;
     }
 

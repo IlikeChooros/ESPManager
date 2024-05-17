@@ -7,6 +7,8 @@
 
 namespace ui
 {
+    typedef std::function<void(void)> EventCallback;
+
     class ScreenElement{
         public:
         ScreenElement(TFT_eSPI* tft = nullptr);
@@ -22,7 +24,11 @@ namespace ui
         /// @param touch pixel coordinates of screen touch
         /// @return true if touch this component was touched
         virtual bool
-        eventListener(Point* touch);
+        touched(Point* touch);
+
+        /// @brief Adds event listener to component
+        virtual void
+        addEventListener(EventCallback callb);
 
         /// @brief Updates visuals of component, should be called after 
         /// `setData()` (implemented in `StorageElement`).

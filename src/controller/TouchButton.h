@@ -48,22 +48,12 @@ TouchButton
         int16_t y
     );
 
-    /**
-     * @brief Set the color
-     * 
-     * @param color 
-     */
-    TouchButton&
-    set_color(uint16_t color);
-
     virtual void 
     draw();
     
     virtual void 
     on_touch();
 
-    uint16_t color;
-    uint16_t bg;
     int16_t x;
     int16_t y;
     int16_t width;
